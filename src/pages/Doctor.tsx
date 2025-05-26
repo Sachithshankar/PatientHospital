@@ -3,6 +3,7 @@ import useSWR from 'swr'
 import {Table, TableBody, TableHead, TableRow} from "@mui/material";
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import AddIcon from '@mui/icons-material/Add';
 
 
 export default function Doctor() {
@@ -15,6 +16,9 @@ export default function Doctor() {
     return (
         <div>
             <h3>Welcome Doctors...!!!</h3>
+            <div style={{
+                textAlign: "end"
+            }}><AddIcon /></div>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
