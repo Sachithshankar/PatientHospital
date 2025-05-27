@@ -88,7 +88,7 @@ export default function Patient() {
         <h3>Welcome Patients...!!!</h3>
             <div style={{
                 textAlign: "end"
-            }}><AddIcon onClick={handleAddClick} style={{ cursor: 'pointer' }} /></div>
+            }}><AddIcon data-testid="add-patient-btn" onClick={handleAddClick} style={{ cursor: 'pointer' }} /></div>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
@@ -113,9 +113,9 @@ export default function Patient() {
                                 <TableCell align="center">{patient.address}</TableCell>
                                 <TableCell align="center">{patient.phone}</TableCell>
                                 <TableCell align="center">
-                                    <EditIcon onClick={() => handleEditClick(patient)}
+                                    <EditIcon data-testid={`edit-btn-${patient.patient_id}`} onClick={() => handleEditClick(patient)}
                                                      style={{ cursor: 'pointer'}}/>
-                                    <DeleteIcon onClick={()=>handleDeletePatient(patient.patient_id)}
+                                    <DeleteIcon data-testid={`delete-btn-${patient.patient_id}`} onClick={()=>handleDeletePatient(patient.patient_id)}
                                                 style={{ cursor: 'pointer'}}/>
                                 </TableCell>
                             </TableRow>

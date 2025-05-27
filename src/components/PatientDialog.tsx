@@ -85,6 +85,7 @@ const PatientDialog: React.FC<Props> = ({ open, onClose, mutatePatient, initialD
         <DialogContent>
           <Box component="form" display="flex" flexDirection="column" gap={2} mt={1}>
             <TextField
+                id="name-input"
                 label="Patient Name"
                 name="patient_name"
                 value={formData.patient_name}
@@ -92,6 +93,7 @@ const PatientDialog: React.FC<Props> = ({ open, onClose, mutatePatient, initialD
                 required
             />
             <TextField
+                id="address-input"
                 label="Address"
                 name="address"
                 value={formData.address}
@@ -99,6 +101,7 @@ const PatientDialog: React.FC<Props> = ({ open, onClose, mutatePatient, initialD
                 required
             />
             <TextField
+                id="phone-input"
                 label="Phone"
                 name="phone"
                 value={formData.phone}
@@ -114,7 +117,7 @@ const PatientDialog: React.FC<Props> = ({ open, onClose, mutatePatient, initialD
         </DialogContent>
         <DialogActions>
           <Button onClick={onClose}>Cancel</Button>
-          <Button onClick={handleSubmit} variant="contained" color="primary">
+          <Button id="submit-btn" onClick={handleSubmit} variant="contained" color="primary">
             Save
           </Button>
         </DialogActions>
